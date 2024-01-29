@@ -6,6 +6,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .bg{
     position: absolute;
     top:2rem;
@@ -33,7 +34,6 @@
 .introName{
     color: yellow;
 }
-
 .introPara{
     font-size: medium;
     font-weight: 300;
@@ -47,6 +47,8 @@
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
+    cursor: pointer;
+    animation: mymove 5s infinite;
 
     
 }
@@ -68,3 +70,14 @@
 
     
 }
+
+
+@keyframes mymove {
+    from {background-color: white;}
+    to {background-color: yellow;}
+  }
+
+@keyframes moves {
+    from {left: 0px;}
+    to {left: 200px;}
+  }

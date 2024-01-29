@@ -17,10 +17,13 @@
     object-fit: cover;
     height: 3rem;
     width: 4rem;
+    animation: slideRight 1s ease forwards;
 }
 .desktopMenuListItems{
     margin: 1rem;
     cursor: pointer;
+    animation: slideTop .5s ease forwards;
+    
 }
 
 .desktopMenuListItems:hover{
@@ -38,6 +41,7 @@
     padding: 0 1rem;
     border-radius: 2rem;
     font-variant: small-caps;
+    cursor: pointer;
     
 }
 .desktopMenuImage{
@@ -45,4 +49,29 @@
     height: 1rem;
     width: 1rem;
     margin: 1rem;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
 }
