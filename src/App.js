@@ -3,6 +3,8 @@ import Navbar from "./components/NavBar/navbar";
 import Intro from "./components/Intro/Intro";
 import Skill from "./components/Skills/skill";
 import Works from "./components/Works/works";
+import Contact from "./components/Contact/contact";
+import Footer from "./components/Footer/footer";
 function App() {
   return (
     <div className="App">
@@ -10,6 +12,8 @@ function App() {
       <Intro/>
       <Skill/>
       <Works/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

@@ -14,6 +14,9 @@
     z-index: -1;
     object-fit: cover;
     height: 100vh;
+    opacity: 0;
+    transform: rotateY(0rem);
+    animation: moveup 3s linear forwards ;
     
 }
 .introContent{
@@ -30,9 +33,18 @@
 .hello{
     font-size: 1.75rem;
     font-weight: 100;
+    opacity: 0;
+    flex-direction: column;
+    transform: rotateY(30px);
+    animation: moveup 2s linear forwards ;
 }
 .introName{
-    color: yellow;
+    color: white;
+    
+}
+
+.introName:hover{
+    color: #df4881;
 }
 .introPara{
     font-size: medium;
@@ -47,15 +59,61 @@
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
+    border-top-right-radius: 0;
     cursor: pointer;
-    animation: mymove 5s infinite;
+    animation: mymove 3s infinite;
+    
 
     
 }
+.btn:hover{
+    border-top-right-radius: 2rem;
+}
+
 .btnImg{
     object-fit: cover;
     margin: 0 0.25rem;
     height: 1rem;
+}
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .dynamic{
+    margin-left: 15px;
+    height: 65px;
+    line-height:65px;
+    overflow: hidden;
+    
+}
+.dynamic li{
+color: #df4881;
+list-style: none;
+font-size: 50px;
+position: relative;
+top: 0;
+animation: slide 6s steps(3) infinite;
+overflow: hidden;
+
+}
+@keyframes slide {
+    100%{
+        top: -200px;
+    }
+    
+}
+.dynamic li span{
+    position: relative;
+}
+
+.dynamic li span::after{
+    content: "";
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    left: 0;
+    background: rgb(30, 30, 30);
+    border-left: 2px solid #df4881;
+    animation: typing 2s steps(14) infinite;
 }
 @media screen and (max-width:480px){
     .bg{
@@ -74,10 +132,24 @@
 
 @keyframes mymove {
     from {background-color: white;}
-    to {background-color: yellow;}
+    to {background-color: #df4881;}
   }
 
 @keyframes moves {
     from {left: 0px;}
     to {left: 200px;}
   }
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: rotateY(0px);
+    }
+    
+}
+@keyframes typing {
+    100%{
+        left:100%;
+        margin: 0 -25px 0 35px;
+    }
+    
+}

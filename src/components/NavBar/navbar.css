@@ -15,8 +15,8 @@
 
 .logo{
     object-fit: cover;
-    height: 3rem;
-    width: 4rem;
+    height: 5rem;
+    width: 5rem;
     animation: slideRight 1s ease forwards;
 }
 .desktopMenuListItems{
@@ -27,22 +27,28 @@
 }
 
 .desktopMenuListItems:hover{
-    color: yellow;
+    color: #df4881;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid yellow;
+    border-bottom: 3px solid #df4881;
+    letter-spacing: 0.25rem;
 }
 .desktopMenuBtn{
     background: white;
-    color: black;
+    color: #fff;
+    background-image: linear-gradient(45deg,#df4881,#c430d7);
     border: none;
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
     border-radius: 2rem;
     font-variant: small-caps;
     cursor: pointer;
+    border-top-right-radius: 0;
     
+}
+.desktopMenuBtn:hover{
+    border-top-right-radius: 2rem;
 }
 .desktopMenuImage{
     object-fit: cover;
@@ -74,4 +80,11 @@
         opacity: 1;
     }
     
+}
+
+.active{
+    color: #df4881;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #df4881;
+    letter-spacing: 0.25rem;
 }
